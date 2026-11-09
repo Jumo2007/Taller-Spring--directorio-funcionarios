@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directorio de funcionarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Directorio de funcionarios</h1>
+  </header>
+
+  <main>
+    <div id="mensaje" class="mensaje oculto" role="status"></div>
+
+    <section class="tarjeta">
+      <h2 id="tituloFormulario">Registrar funcionario</h2>
+      <form id="formulario" novalidate>
+        <label>ID
+          <input type="text" id="id" readonly placeholder="Se genera automáticamente">
+        </label>
+        <label>Nombre *
+          <input type="text" id="nombre" required>
+        </label>
+        <label>Cargo *
+          <input type="text" id="cargo" required>
+        </label>
+        <label>Departamento *
+          <input type="text" id="departamento" required>
+        </label>
+        <label>Teléfono
+          <input type="text" id="telefono">
+        </label>
+        <div class="acciones">
+          <button type="submit" id="btnGuardar">Guardar</button>
+          <button type="button" id="btnLimpiar" class="secundario">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Consultas</h2>
+      <div class="busquedas">
+        <div class="busqueda">
+          <input type="number" id="buscarId" placeholder="ID" min="1">
+          <button type="button" id="btnBuscarId">Consultar por ID</button>
+        </div>
+        <div class="busqueda">
+          <input type="text" id="buscarNombre" placeholder="Parte del nombre">
+          <button type="button" id="btnBuscarNombre">Buscar por nombre</button>
+        </div>
+        <div class="busqueda">
+          <input type="text" id="buscarDepto" placeholder="Departamento (ej. Contabilidad)">
+          <button type="button" id="btnBuscarDepto">Filtrar por departamento</button>
+        </div>
+        <button type="button" id="btnVerTodos" class="secundario">Ver listado completo</button>
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Funcionarios</h2>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Nombre</th><th>Cargo</th>
+              <th>Departamento</th><th>Teléfono</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
