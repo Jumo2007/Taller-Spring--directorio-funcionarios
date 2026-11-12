@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso · Directorio de funcionarios</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Acceso</h1>
+    <a href="index.html" class="enlace-header">← Volver al directorio</a>
+  </header>
+
+  <main>
+    <div id="mensaje" class="mensaje oculto" role="status"></div>
+
+    <section class="tarjeta">
+      <h2>Crear cuenta</h2>
+      <form id="formRegistro" novalidate>
+        <label>Usuario (4 a 30 caracteres)
+          <input type="text" id="regUsuario" autocomplete="username">
+        </label>
+        <label>Contraseña (mínimo 6)
+          <input type="password" id="regClave" autocomplete="new-password">
+        </label>
+        <label>Confirmar contraseña
+          <input type="password" id="regClave2" autocomplete="new-password">
+        </label>
+        <div class="acciones">
+          <button type="submit">Registrarme</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Iniciar sesión</h2>
+      <form id="formLogin" novalidate>
+        <label>Usuario
+          <input type="text" id="logUsuario" autocomplete="username">
+        </label>
+        <label>Contraseña
+          <input type="password" id="logClave" autocomplete="current-password">
+        </label>
+        <div class="acciones">
+          <button type="submit">Entrar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="acceso.js"></script>
+</body>
+</html>
