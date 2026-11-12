@@ -74,3 +74,13 @@ td .btn-fila { margin-right: .25rem; padding: .3rem .7rem; }
   form { grid-template-columns: 1fr; }
   .busqueda { flex-direction: column; }
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.enlace-header {
+  color: #fff;
+  text-decoration: underline;
+  font-size: .95rem;
+}
